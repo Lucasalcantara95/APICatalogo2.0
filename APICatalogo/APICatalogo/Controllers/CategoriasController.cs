@@ -27,19 +27,43 @@ public class CategoriasController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<Categoria>> Get()
     {
-        return _context.Categorias.AsNoTracking().ToList();
+        try
+        {
+            throw new Exception();
+            //return _context.Categorias.AsNoTracking().ToList();
+        }
+        catch
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema ao tratar a sua solicitação.");
+        }
+        //return _context.Categorias.AsNoTracking().ToList();
     }
+
 
     [HttpGet("{id:int}", Name = "ObterCategoria")]
     public ActionResult<Categoria> Get(int id)
     {
-        var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
-
-        if (categoria == null)
+        try
         {
-            return NotFound("Categoria não encontrada...");
+            var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
+
+            if (categoria == null)
+            {
+                return NotFound("Categoria não encontrada...");
+            }
+            return Ok(categoria);
         }
-        return Ok(categoria);
+        catch
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "$Categoria não encontrada...");
+        }
+        // var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
+
+        // if (categoria == null)
+        // {
+        //     return NotFound("Categoria não encontrada...");
+        // }
+        // return Ok(categoria);
     }
 
     [HttpPost]

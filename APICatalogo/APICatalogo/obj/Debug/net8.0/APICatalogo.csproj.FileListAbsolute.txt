@@ -254,3 +254,4 @@ C:\Users\Cyber Luck\Projetos .NET\APICatalogo2.0\APICatalogo\APICatalogo\obj\Deb
 C:\Users\Cyber Luck\Projetos .NET\APICatalogo2.0\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.pdb
 C:\Users\Cyber Luck\Projetos .NET\APICatalogo2.0\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.genruntimeconfig.cache
 C:\Users\Cyber Luck\Projetos .NET\APICatalogo2.0\APICatalogo\APICatalogo\obj\Debug\net8.0\ref\APICatalogo.dll
+C:\Users\Cyber Luck\Projetos .NET\APICatalogo2.0\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.sourcelink.json
