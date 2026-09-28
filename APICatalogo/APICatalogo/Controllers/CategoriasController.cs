@@ -27,15 +27,15 @@ public class CategoriasController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<Categoria>> Get()
     {
-        try
-        {
-            throw new Exception();
-            //return _context.Categorias.AsNoTracking().ToList();
-        }
-        catch
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema ao tratar a sua solicitação.");
-        }
+        // try
+        // {
+        //     throw new Exception();
+            return _context.Categorias.AsNoTracking().ToList();
+        // }
+        // catch
+        // {
+        //     return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema ao tratar a sua solicitação.");
+        // }
         //return _context.Categorias.AsNoTracking().ToList();
     }
 
@@ -68,7 +68,7 @@ public class CategoriasController : ControllerBase
 
     [HttpPost]
     public ActionResult Post(Categoria categoria)
-    {
+    { 
         if (categoria is null)
             return BadRequest();
 
